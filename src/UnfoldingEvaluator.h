@@ -80,6 +80,12 @@ public:
   double evaluate(Unfolder* unfolder) override;
 };
 
+class FoldAmountEvaluator : public NetEvaluator {
+public:
+  virtual ~FoldAmountEvaluator(){}
+  double evaluate(Unfolder* unfolder) override;
+};
+
 class HullAreaEvaluator : public NetEvaluator {
 public:
   virtual ~HullAreaEvaluator(){}

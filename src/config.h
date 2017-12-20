@@ -36,6 +36,7 @@ enum class Objective {
   CUT_LENGTH,         // total cut length
   HULL_AREA,          // hull area
   POLYGON_FIT,        // polygon fit
+  FOLD_AMOUNT,        // total amount of folding
 };
 
 struct Config {

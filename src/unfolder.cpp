@@ -2677,6 +2677,14 @@ float Unfolder::getTotalCutLength() const {
   return m_m->total_edge_length - total_selected_edge_length;
 }
 
+float Unfolder::getTotalFoldAmount() const {
+  double total_selected_edge_fold = 0.0;
+
+  for (const auto& eid : this->getFoldEdges())
+    total_selected_edge_fold += m_m->edges[eid].folding_angle;
+  return (float)total_selected_edge_fold;
+}
+
 float Unfolder::getHullArea() const {
   auto hull = this->buildConvexHull2D();
   double hull_area = masc::util::ConvexHull2DArea(hull);

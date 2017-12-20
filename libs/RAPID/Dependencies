@@ -1,0 +1,6 @@
+RAPID.o: RAPID.cpp RAPID.H RAPID_private.H matvec.H overlap.H obb.H
+build.o: build.cpp RAPID_version.H RAPID.H RAPID_private.H matvec.H \
+ moments.H obb.H
+collide.o: collide.cpp RAPID_version.H RAPID.H RAPID_private.H matvec.H \
+ overlap.H obb.H
+overlap.o: overlap.cpp matvec.H

@@ -82,6 +82,10 @@ double CutLengthEvaluator::evaluate(Unfolder* unfolder) {
   return unfolder->getTotalCutLength();
 }
 
+double FoldAmountEvaluator::evaluate(Unfolder* unfolder) {
+  return unfolder->getTotalFoldAmount();
+}
+
 double HullAreaEvaluator::evaluate(Unfolder* unfolder) {
   return 1.0/unfolder->getHullArea();
 }

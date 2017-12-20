@@ -32,6 +32,9 @@ UnfoldingProblem::UnfoldingProblem(Unfolder* unfolder) {
   case Objective::CUT_LENGTH:
     this->m_net_evaluator.reset(new CutLengthEvaluator);
     break;
+  case Objective::FOLD_AMOUNT:
+    this->m_net_evaluator.reset(new FoldAmountEvaluator);
+    break;
   case Objective::HULL_AREA:
     this->m_net_evaluator.reset(new HullAreaEvaluator);
     break;

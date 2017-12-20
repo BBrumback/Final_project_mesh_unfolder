@@ -341,6 +341,9 @@ public:
   /// Get total cut length based on the selected_edges.
   float getTotalCutLength() const;
 
+  /// Get total amount of folding based on selected_edges.
+  float getTotalFoldAmount() const;
+
   /// Get hull area
   float getHullArea() const;
 

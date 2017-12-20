@@ -120,6 +120,8 @@ bool parseArg(int argc, char ** argv) {
         config.opt_obj = Objective::HULL_AREA;
       } else if (obj == "polygon") {
         config.opt_obj = Objective::POLYGON_FIT;
+      } else if (obj == "fold_amount") {
+	config.opt_obj = Objective::FOLD_AMOUNT;
       } else {
         cerr << "!Error! Unknown objective type = " << obj << endl;
         return false;
@@ -311,6 +313,7 @@ void printUsage(char * name) {
   cerr << "  -objective # | specify the objective for optimization\n";
   cerr << "     hull_area\n";
   cerr << "     cut_length\n\n";
+  cerr << "     fold_amount\n\n";
   cerr << "     polygon\n\n";
 
   cerr <<"Polygon Net Optimization\n";
